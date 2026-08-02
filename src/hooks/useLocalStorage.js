@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 
 /**
- * A custom React hook to persist state changes in localStorage.
- * Useful for real-world projects that need state retention across reloads.
+ * A custom React hook to persist state changes in local storage
+ * Useful for real world projects that need state retention across reloads
  */
 export default function useLocalStorage(key, initialValue) {
-  // Pass initial state function to useState so logic only runs once
+  // Retrieve saved value or set the default value
   const [value, setValue] = useState(() => {
     try {
       const jsonValue = localStorage.getItem(key);
+      // Return parsed data if it exists in local storage
       if (jsonValue != null) return JSON.parse(jsonValue);
 
+      // Execute function if initial value is a callback
       if (typeof initialValue === 'function') {
         return initialValue();
       } else {
@@ -22,6 +24,7 @@ export default function useLocalStorage(key, initialValue) {
     }
   });
 
+  // Sync state changes back to local storage whenever key or value updates
   useEffect(() => {
     try {
       localStorage.setItem(key, JSON.stringify(value));

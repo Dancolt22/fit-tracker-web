@@ -43,7 +43,7 @@ const DEFAULT_NUTRITION = [
   // 2 Days ago
   { id: 'n8', name: 'Protein Shake & Banana', mealType: 'breakfast', calories: 310, protein: 30, carbs: 38, fat: 4, date: getPastDateStr(2) },
   { id: 'n9', name: 'Turkey Wrap', mealType: 'lunch', calories: 450, protein: 28, carbs: 35, fat: 15, date: getPastDateStr(2) },
-  { id: 'n10', name: 'Pasta Primvera with Chicken', mealType: 'dinner', calories: 690, protein: 38, carbs: 75, fat: 18, date: getPastDateStr(2) },
+  { id: 'n10', name: 'Pasta Primavera with Chicken', mealType: 'dinner', calories: 690, protein: 38, carbs: 75, fat: 18, date: getPastDateStr(2) },
 
   // 1 Day ago
   { id: 'n11', name: 'Berry Smoothie Bowl', mealType: 'breakfast', calories: 340, protein: 8, carbs: 62, fat: 6, date: getPastDateStr(1) },

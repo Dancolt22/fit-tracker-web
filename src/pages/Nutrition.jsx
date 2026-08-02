@@ -71,7 +71,7 @@ export default function Nutrition() {
 
   const mealTypes = [
     { id: 'breakfast', label: 'Breakfast', desc: 'First meal of the day' },
-    { id: 'lunch', label: 'Lunch', desc: 'Mid-day meal' },
+    { id: 'lunch', label: 'Lunch', desc: 'Midday meal' },
     { id: 'dinner', label: 'Dinner', desc: 'Evening meal' },
     { id: 'snack', label: 'Snacks & Extras', desc: 'Bites between meals' }
   ];
