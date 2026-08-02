@@ -1,0 +1,117 @@
+.settings-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Success Banner styling */
+.success-banner {
+  background: var(--primary-glow);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn-close-banner {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  color: var(--primary);
+  line-height: 1;
+}
+
+/* Two Column Form Layout */
+.settings-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .settings-form-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.settings-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-card {
+  padding: 1.75rem;
+}
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.settings-card-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.settings-card-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Display & Theme Toggle panel */
+.theme-select-panel {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.theme-toggle-action {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* Info notification inside targets */
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.settings-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-save {
+  padding: 0.85rem 2.5rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px var(--primary-glow);
+}

@@ -1,0 +1,87 @@
+.progress-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Averages Grid */
+.averages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+}
+
+.card-top {
+  margin-bottom: 0.75rem;
+}
+
+.card-lbl {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.card-val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.font-xs-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Charts Layout Grid */
+.charts-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .charts-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-container-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chart-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.chart-header p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.chart-render-area {
+  width: 100%;
+  position: relative;
+  background: rgba(15, 23, 42, 0.2);
+  border-radius: 12px;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.full-width-chart {
+  grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+  .full-width-chart {
+    grid-column: span 1;
+  }
+}

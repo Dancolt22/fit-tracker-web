@@ -1,0 +1,276 @@
+.workouts-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 2.5rem;
+}
+
+/* Summary Grid */
+.workouts-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+}
+
+.summary-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bg-accent-glow { background: var(--accent-glow); }
+.bg-primary-glow { background: var(--primary-glow); }
+.bg-secondary-glow { background: var(--secondary-glow); }
+
+.summary-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-val {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.summary-lbl {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.workouts-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 1025px) {
+  .workouts-content-grid {
+    grid-template-columns: 350px minmax(0, 1fr);
+  }
+}
+
+.workouts-actions-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.log-form-card h3,
+.presets-card h3,
+.history-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.workout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Presets search and list */
+.preset-header {
+  margin-bottom: 0.75rem;
+}
+.preset-header h3 {
+  margin-bottom: 0;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.search-box input {
+  width: 100%;
+  padding-left: 2.5rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.presets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.preset-item {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preset-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary);
+  transform: translateX(2px);
+}
+
+.preset-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.preset-kcal {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.no-results {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* History Card */
+.history-card {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-desc {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.history-table-container {
+  overflow-x: auto;
+  flex-grow: 1;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.history-table th, 
+.history-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.history-table th {
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.history-row {
+  transition: background-color 0.2s;
+}
+
+.history-row:hover {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.date-cell, 
+.duration-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.col-date {
+  white-space: nowrap;
+}
+
+.col-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.col-calories {
+  white-space: nowrap;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn-delete:hover {
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+/* Empty History */
+.empty-history {
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.icon-empty {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  width: 48px;
+  height: 48px;
+}
+
+.empty-history h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.empty-history p {
+  max-width: 320px;
+  font-size: 0.9rem;
+}
